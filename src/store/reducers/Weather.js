@@ -48,6 +48,7 @@ const handlers = {
   [actions.WEATHER_DATA_RECEIVED]: weatherDataRecevied
 };
 
+// This is really nice approach, WOW! Kudos to the developer
 export default (state = initialState, action) => {
   const handler = handlers[action.type];
   if (typeof handler === "undefined") return state;

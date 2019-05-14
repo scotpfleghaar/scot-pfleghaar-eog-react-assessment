@@ -11,7 +11,7 @@ const styles = {
   }
 };
 
-const Header = props => {
+export const Header = props => {
   const { classes } = props;
 
   const name = "Scot Pfleghaar's";
