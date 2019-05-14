@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
 import NowWhat from "./components/NowWhat";
 import Drone from "./components/Drone";
+import DroneMap from "./components/DroneMap";
 
 const store = createStore();
 const theme = createMuiTheme({
@@ -36,6 +37,7 @@ const App = props => (
         <Header />
         <NowWhat />
         <Drone/>
+        <DroneMap/>
         <ToastContainer />
       </Wrapper>
     </Provider>
