@@ -5,6 +5,7 @@ import Plot from 'react-plotly.js';
 import Card from "@material-ui/core/Card";
 import {withStyles} from "@material-ui/core/styles";
 import CardContent from "@material-ui/core/CardContent";
+import {transformTemperatureFromData, transformTimeStampFromData} from "../Utilities";
 
 const styles = {
     card: {
@@ -33,7 +34,7 @@ class Drone extends Component {
 
     componentDidUpdate() {
         if (!this.state.watchStarted) {
-            setInterval(()=> {
+            setInterval(() => {
                 this.props.onLoad();
             }, 3500);
             this.setState({
@@ -45,21 +46,21 @@ class Drone extends Component {
     renderPlot() {
         const {data} = this.props;
         if (!data.length) return null;
-        console.log(data);
-        const temperatures = data.map(entry => entry['metric']);
-        const TimeStampHourly = data.map(entry => new Date(entry['timestamp']).getHours());
-        console.log(TimeStampHourly);
         return <Plot
             data={[
                 {
-                    x: TimeStampHourly.length,
-                    y: temperatures,
                     type: 'scatter',
-                    mode: 'lines+points',
-                    marker: {color: 'blue'},
+                    mode: 'lines',
+                    x: transformTimeStampFromData(data),
+                    y: transformTemperatureFromData(data)
                 }
             ]}
-            layout={{height: 500, title: 'Drone Temperature'}}
+            layout={
+                {
+                    height: 450,
+                    title: 'Drone Temperature'
+                }
+            }
         />
     }
 
