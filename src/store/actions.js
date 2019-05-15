@@ -4,6 +4,6 @@ export const WEATHER_DATA_RECEIVED = "EVENT/WEATHER_DATA_RECEIVED";
 export const WEATHER_ID_RECEIVED = "EVENT/WEATHER_ID_RECEIVED";
 
 
-// Drone Related Actions
+// DroneTemperatureGraph Related Actions
 export const FETCH_DRONE_DATA = "COMMAND/FETCH_DRONE_DATA";
 export const DRONE_DATA_RECEIVED = "EVENT/DRONE_DATA_RECEIVED";

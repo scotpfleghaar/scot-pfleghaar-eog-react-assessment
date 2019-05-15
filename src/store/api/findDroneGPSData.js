@@ -1,7 +1,7 @@
 import "isomorphic-fetch";
 
 /**
- *  Gets an Array of data with data provided by a Drone
+ *  Gets an Array of data with data provided by a DroneTemperatureGraph
  * @returns {Promise<{error: {code: number}}|{data: any}>}
  */
 const findDroneGPSData = async () => {

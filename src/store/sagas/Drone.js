@@ -5,7 +5,7 @@ import { values } from 'lodash';
 
 
 /**
- * Generator to handle the data and errors from the Drone data endpoint.
+ * Generator to handle the data and errors from the DroneTemperatureGraph data endpoint.
  * @returns {IterableIterator<*|PutEffect<{payload: *, type: string}>|*|CancelEffect|CancelEffect[]|*|CallEffect|*|PutEffect<{code: number, type: string}>>}
  */
 function* watchDroneGPSData() {
