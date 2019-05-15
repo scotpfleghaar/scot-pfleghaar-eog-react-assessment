@@ -3,6 +3,11 @@ import { getTimeFromMS } from '../Utilities'
 
 
 export class Dashboard extends Component {
+
+    shouldComponentUpdate(nextProps) {
+        return this.props.data[0].timestamp !== nextProps.data[0].timestamp;
+    }
+
     render() {
         const currentDroneData = this.props.data[0];
         if (!currentDroneData) return null;

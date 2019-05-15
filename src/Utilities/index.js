@@ -25,7 +25,8 @@ export const transformTimeStampFromData = (data) => {
  */
 export const getTimeFromMS = (ms) => {
     const differenceInMS = new Date().getTime() - new Date(ms).getTime();
-    const minutes = Math.floor(differenceInMS / 60000);
-    const seconds = ((differenceInMS % 60000) / 1000).toFixed(0);
+    let minutes = Number(Math.floor(differenceInMS / 60000));
+    let  seconds = Number(((differenceInMS % 60000) / 1000).toFixed(0));
+    seconds === 60 ? seconds = 0 : minutes += 1;
     return `${minutes} Minutes, ${seconds} Seconds Ago`
 };
