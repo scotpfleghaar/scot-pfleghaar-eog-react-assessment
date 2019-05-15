@@ -1,6 +1,14 @@
 import React, {Component} from "react";
 import Plot from 'react-plotly.js';
 import {transformTemperatureFromData, transformTimeStampFromData} from "../Utilities";
+import {withStyles} from "@material-ui/core";
+
+const styles = {
+    chart: {
+       overflow: 'scroll'
+    }
+};
+
 
 export class DroneTemperatureGraph extends Component {
     renderPlot() {
@@ -25,9 +33,14 @@ export class DroneTemperatureGraph extends Component {
     }
 
     render() {
-        return this.renderPlot();
+        const { classes } = this.props;
+        return (
+            <div className={classes.chart}>
+                {this.renderPlot()}
+            </div>
+        )
     }
 }
 
 
-export default DroneTemperatureGraph;
+export default withStyles(styles)(DroneTemperatureGraph);
