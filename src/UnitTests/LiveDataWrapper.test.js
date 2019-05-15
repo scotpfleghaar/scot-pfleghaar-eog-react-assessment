@@ -37,7 +37,6 @@ describe('<LiveDataWrapper/>', () => {
     });
 
     it('Renders the LiveDataWrapper with the correct components', () => {
-        console.log(wrapper.debug());
         expect(wrapper.find('Dashboard')).toHaveLength(1);
         expect(wrapper.find('DroneTemperatureGraph')).toHaveLength(1);
         expect(wrapper.find('DroneMap')).toHaveLength(1);

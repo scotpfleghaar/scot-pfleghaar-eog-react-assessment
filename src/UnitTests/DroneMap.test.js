@@ -19,13 +19,11 @@ describe('<DroneMap/>', () => {
     });
 
     it('Renders the DroneMap with the given props', () => {
-        console.log(wrapper.debug());
         expect(wrapper.find('GoogleMap')).toHaveLength(1);
         expect(wrapper.find('Drone')).toHaveLength(1);
     });
 
     it('Renders the Drone with the correct Lat and Lng props', () => {
-        console.log(wrapper.debug());
         expect(wrapper.find('Drone').prop('lat')).toEqual(12.34567);
         expect(wrapper.find('Drone').prop('lng')).toEqual(98.76543);
     });

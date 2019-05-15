@@ -29,7 +29,6 @@ describe('<DroneTemperatureGraph/>', () => {
     });
 
     it('Renders the DroneTemperatureGraph with the given props', () => {
-        console.log(wrapper.debug());
         expect(wrapper.find('PlotlyComponent')).toHaveLength(1);
     });
 });
