@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Plot from 'react-plotly.js';
 import {transformTemperatureFromData, transformTimeStampFromData} from "../Utilities";
 
-class DroneTemperatureGraph extends Component {
+export class DroneTemperatureGraph extends Component {
     renderPlot() {
         const {data} = this.props;
         if (!data.length) return null;

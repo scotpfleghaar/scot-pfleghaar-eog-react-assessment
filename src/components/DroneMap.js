@@ -4,7 +4,7 @@ import Place from '@material-ui/icons/Place';
 
 const Drone = () => <Place/>;
 
-class DroneMap extends Component {
+export class DroneMap extends Component {
     constructor(props) {
         super(props);
         this.state = {

@@ -2,8 +2,7 @@ import React, {Component} from "react";
 import { getTimeFromMS } from '../Utilities'
 
 
-class Dashboard extends Component {
-
+export class Dashboard extends Component {
     render() {
         const currentDroneData = this.props.data[0];
         if (!currentDroneData) return null;

@@ -29,7 +29,7 @@ const cardStyles = theme => ({
 });
 const CardHeader = withStyles(cardStyles)(CardHeaderRaw);
 
-class LiveDataWrapper extends Component {
+export class LiveDataWrapper extends Component {
     constructor(props) {
         super(props);
         this.state = {
